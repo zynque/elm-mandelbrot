@@ -1,0 +1,20 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div style="margin: 0; padding: 0">
+    <canvas id='elm-canvas' width="700" height="500" style="width: 700px; height: 500px; padding=0; margin=0"></canvas>
+    <p></p>
+    <div id='elm-controls' style="margin: 0; padding: 0"></div>
+  </div>
+  <script src="./canvas-native.js"></script>
+  <script src="./fractals.js"></script>
+  <script>
+    var app = Elm.Fractals.init({
+      node: document.getElementById('elm-controls')
+    });
+    app.ports.writeImage.subscribe(function(data) {
+      updateImageData(data);
+    });
+  </script>
+</body></html>

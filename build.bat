@@ -1,0 +1,1 @@
+elm make src/Fractals.elm --output=fractals.js
